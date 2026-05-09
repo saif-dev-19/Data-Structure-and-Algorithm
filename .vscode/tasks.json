@@ -10,7 +10,7 @@
         "-ExecutionPolicy",
         "Bypass",
         "-Command",
-        "$dir = Split-Path -Parent '${file}'; $name = [IO.Path]::GetFileNameWithoutExtension('${file}'); $out = Join-Path $dir 'output'; New-Item -ItemType Directory -Force -Path $out | Out-Null; g++ '${file}' -o (Join-Path $out ($name + '.exe')); if ($?) { & (Join-Path $out ($name + '.exe')) }"
+        "$dir = Split-Path -Parent '${file}'; $name = [IO.Path]::GetFileNameWithoutExtension('${file}'); $out = Join-Path $dir 'output'; New-Item -ItemType Directory -Force -Path $out | Out-Null; $exe = Join-Path $out ($name + '.exe'); g++ '${file}' -o $exe; if ($?) { & $exe; Remove-Item $exe -Force; Remove-Item $out -Force }"
       ],
       "options": {
         "cwd": "${fileDirname}"
