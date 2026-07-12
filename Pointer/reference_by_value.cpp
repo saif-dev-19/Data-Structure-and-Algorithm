@@ -6,8 +6,9 @@ using namespace std;
 
 
 void changeA(int &a){
+    cout << "The address of a is: " << &a << endl;
     a = 20;
-    cout << a << endl;
+    cout << "The value of a is: " << a << endl;
 }
 
 int main(){
@@ -21,7 +22,9 @@ int main(){
     // cout << "The value of b is: " << b << endl;
     // cout << "The value of a is: " << a << endl;
 
+    
+    cout << "The address of a is: " << &a << endl;
     changeA(a);
-    cout << a << endl;
+    cout << "The value of a is: " << a << endl;
 
 }
