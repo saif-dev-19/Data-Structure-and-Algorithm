@@ -19,7 +19,11 @@ int main(){
     cout << "Enter the size of the array: ";
     cin >> n;
 
+
+
     int arr[n];
+
+    int size = sizeof(arr)/sizeof(int);
 
     for(int i = 0; i<n; i++){
         cin >> arr[i];
@@ -29,6 +33,6 @@ int main(){
     cout << "Enter the element to search: ";
     cin >> key;
 
-    linear_search(arr, n, key);
+    linear_search(arr, size, key);
 
 }
