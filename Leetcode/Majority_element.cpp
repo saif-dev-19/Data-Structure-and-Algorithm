@@ -9,16 +9,15 @@ public:
         int count = 0;
         int majority;
         for (int i = 0; i < nums.size(); i++) {
-            if (count) {
-                if (nums[i] == majority) {
+            if (count == 0)
+                majority = nums[i];
+            
+            if (nums[i] == majority) {
                     count++;
-                } else {
+                }
+            else {
                     count--;
                 }
-            } else {
-                majority = nums[i];
-                count = 1;
-            }
         }
 
         return majority;
