@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//Brute Force  TC-> O(n^3)
+//slightly optimized  TC-> O(n^2)
 
 
 void MaxSubarray(int arr[], int n){
