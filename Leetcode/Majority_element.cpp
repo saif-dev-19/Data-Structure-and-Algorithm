@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// Moore's voting algorithm
+
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {
