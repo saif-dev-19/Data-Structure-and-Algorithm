@@ -6,21 +6,17 @@ using namespace std;
 
 void MaxSubarray(int arr[], int n){
     int latestMax = INT_MIN;
-    for(int start = 0; start<n; start++){
 
+    for( int start = 0; start<n; start++){
+        int sum = 0;
         for(int end = start; end<n; end++){
-            int max = 0;
-
-            for(int i = start; i<=end; i++){
-                max += arr[i];
-            }
-
-            if(max > latestMax)
-                latestMax = max;
+            sum += arr[end];
+            if (sum > latestMax)
+                latestMax = sum;
         }
     }
 
-    cout << "Max SubArray = "<<latestMax << endl;
+    cout <<"Max subarray sum: " <<latestMax;
 }
 
 int main(){
