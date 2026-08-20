@@ -2,7 +2,7 @@
 using namespace std;
 
 void maxProfit(int prices[], int n){
-    int bestBuy[10000];
+    int bestBuy[100000];
     bestBuy[0] = INT_MAX;
 
     for(int i =1; i<n; i++){
